@@ -7,7 +7,9 @@
     <!--<uses-permission android:name="android.permission.CAMERA"/>-->
 
 
+    <!--Agregamos logica antes de que se abra la aplicacion-->
     <application
+            android:name=".app.MyApp"
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"

@@ -22,5 +22,7 @@
     <string name="button_go_back">ATRÁS</string>
     <string name="button_take_picture">Tomar Foto</string>
     <string name="button_take_picture_out">Foto Sin Permisos</string>
-
+    <string name="preferences_name_hint">Agregar Nombre</string>
+    <string name="preferences_age_hint">Edad</string>
+    <string name="button_save">Guardar</string>
 </resources>
