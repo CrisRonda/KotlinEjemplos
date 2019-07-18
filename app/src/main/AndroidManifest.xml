@@ -3,6 +3,9 @@
           package="com.example.myapplication">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <!--Descomentar esta linea para pedir permisos en PermissionsActivity para el boton-->
+    <!--<uses-permission android:name="android.permission.CAMERA"/>-->
+
 
     <application
             android:allowBackup="true"
@@ -11,9 +14,12 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".others.ToolbarActivity">
+        </activity>
         <activity android:name=".activities.IntentFlagsActivity">
         </activity>
-        <activity android:name=".activities.IntentExtrasActivity">
+        <activity android:name=".activities.IntentExtrasActivity"
+                  android:parentActivityName=".activities.IntentExtrasActivity">
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -22,7 +28,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activities.LifeCycleEventsActivity">
+        <activity android:name=".others.LifeCycleEventsActivity">
         </activity>
         <activity android:name=".activities.SharedPreferencesActivity">
         </activity>

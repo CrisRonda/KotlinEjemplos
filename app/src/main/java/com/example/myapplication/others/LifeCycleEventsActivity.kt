@@ -1,11 +1,13 @@
-package com.example.myapplication.activities
+package com.example.myapplication.others
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import android.widget.Toolbar
+import kotlinx.android.synthetic.main.activity_life_cycle.*
 
-open class LifeCycleEventsActivity : AppCompatActivity() {
+open class LifeCycleEventsActivity : ToolbarActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -20,5 +20,7 @@
     <string name="button_intent_flags">Intent Flags</string>
     <string name="button_intent_object">Intent Object</string>
     <string name="button_go_back">ATRÁS</string>
+    <string name="button_take_picture">Tomar Foto</string>
+    <string name="button_take_picture_out">Foto Sin Permisos</string>
 
 </resources>

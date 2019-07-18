@@ -3,15 +3,20 @@ package com.example.myapplication.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toolbar
 import com.example.myapplication.R
 import com.example.myapplication.model.Student
+import com.example.myapplication.others.ToolbarActivity
 import kotlinx.android.synthetic.main.activity_intent.*
 
-class IntentActivity : AppCompatActivity() {
+class IntentActivity : ToolbarActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intent)
+        toolbarToLoad(toolbar as Toolbar)
+        enableHomeDisplay(true)
+        (toolbar as Toolbar).setNavigationOnClickListener{onBackPressed()}
         buttonExtras.setOnClickListener { goToIntentExtras() }
         buttonFlags.setOnClickListener { goToIntentFlags() }
         buttonObject.setOnClickListener { goToObject() }

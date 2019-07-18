@@ -6,7 +6,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".activities.IntentActivity">
-
+    <include android:id="@+id/toolbar"
+             layout="@layout/toolbar"/>
     <Button
             android:text="@string/button_intent_Extras"
             android:layout_width="0dp"

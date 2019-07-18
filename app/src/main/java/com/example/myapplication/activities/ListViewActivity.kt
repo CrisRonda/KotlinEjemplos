@@ -2,17 +2,22 @@ package com.example.myapplication.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toolbar
 import com.example.myapplication.R
 import com.example.myapplication.adapters.PersonAdapter
 import com.example.myapplication.model.Person
+import com.example.myapplication.others.ToolbarActivity
 import kotlinx.android.synthetic.main.activity_list_view.*
 
-class ListViewActivity : AppCompatActivity() {
+class ListViewActivity : ToolbarActivity() {
     private lateinit var adapter: PersonAdapter
     private lateinit var personList: List<Person>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_view)
+        toolbarToLoad(toolbar as Toolbar)
+        enableHomeDisplay(true)
+        (toolbar as Toolbar).setNavigationOnClickListener{onBackPressed()}
         personList = getPerson()
         adapter = PersonAdapter(this, R.layout.list_view_person, personList)
         listView.adapter = adapter

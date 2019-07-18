@@ -6,7 +6,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".activities.KotlinAndroidExtensionsActivity">
-
+    <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"/>
     <Button
             android:text="@string/button_kat_id"
             android:layout_width="0dp"

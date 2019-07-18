@@ -1,21 +1,24 @@
 package com.example.myapplication
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import android.widget.Toolbar
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.lifecycle.Lifecycle
 import com.example.myapplication.activities.*
+import com.example.myapplication.others.ToolbarActivity
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.activity_main.*
 
 
-class MainActivity : AppCompatActivity() {
-
+class MainActivity : ToolbarActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        toolbarToLoad(toolbar as Toolbar)
+
         val btnLifeCycle = findViewById<Button>(R.id.button_to_cycle)
         val btnClickEvents = findViewById<Button>(R.id.button_to_click)
         val btnAndroidExt = findViewById<Button>(R.id.button_to_android_extensions)

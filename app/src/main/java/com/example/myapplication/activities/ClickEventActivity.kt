@@ -5,12 +5,18 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
+import android.widget.Toolbar
 import com.example.myapplication.R
+import com.example.myapplication.others.ToolbarActivity
+import kotlinx.android.synthetic.main.activity_click_event.*
 
-class ClickEventActivity : AppCompatActivity(), View.OnLongClickListener {
+class ClickEventActivity : ToolbarActivity(), View.OnLongClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_click_event)
+        toolbarToLoad(toolbar as Toolbar)
+        enableHomeDisplay(true)
+        (toolbar as Toolbar).setNavigationOnClickListener{onBackPressed()}
         clickInLine()
         clickMulti1()
         val btn1 = findViewById<Button>(R.id.buttonClickMulti1)
